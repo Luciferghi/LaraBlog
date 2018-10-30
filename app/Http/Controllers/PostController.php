@@ -112,7 +112,7 @@ class PostController extends Controller
         else{
         $this->validate($request, array(
             'title' => 'required|max:255',
-            'slugs' => 'required|alphadash|min:5|max:255|unique: posts,slug',
+            'slugs' => 'required|alphadash|max:255|unique: posts,slug',
             'body'  => 'required'
         ));}
 
